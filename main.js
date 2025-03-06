@@ -1,9 +1,13 @@
 import Ember from "./Ember.js";
-
-
+import { EMBEREKLISTA } from "./adat.js";
 let articleElem = document.querySelector("article")
-const ember1 = new Ember("Jenő", 1977, 220, articleElem)
-const ember2 = new Ember("Jolán", 1978, 120, articleElem)
+for (let index = 0; index < EMBEREKLISTA.length; index++) {
+    const EMBER = new Ember(EMBEREKLISTA[index].nev, EMBEREKLISTA[index].szulIdo, EMBEREKLISTA[index].magassag, articleElem);
+    
+}
+
+
+
 console.log(ember1);
 console.log(ember1.szulido);
 console.log(ember1.nev, ember1.kor,ember1.magassag);
